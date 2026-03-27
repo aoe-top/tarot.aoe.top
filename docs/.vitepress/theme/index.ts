@@ -3,6 +3,7 @@ import { h } from "vue";
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import GiscusComment from "./components/GiscusComment.vue";
+import FriendlyLinks from "./components/FriendlyLinks.vue";
 
 import imageViewer from "vitepress-plugin-image-viewer";
 import vImageViewer from "vitepress-plugin-image-viewer/lib/vImageViewer.vue";
@@ -17,6 +18,7 @@ export default {
         return h(DefaultTheme.Layout, null, {
             // https://vitepress.dev/guide/extending-default-theme#layout-slots
             "doc-after": () => h(GiscusComment),
+            "layout-bottom": () => h(FriendlyLinks),
         });
     },
     enhanceApp(ctx) {
