@@ -46,7 +46,7 @@ export default {
             if (needsNormalization(currentPath)) {
                 const normalizedPath = normalizePath(currentPath);
                 console.log(
-                    `Initial redirect from ${currentPath} to ${normalizedPath}`
+                    `Initial redirect from ${currentPath} to ${normalizedPath}`,
                 );
                 window.history.replaceState({}, "", normalizedPath);
                 router.go(normalizedPath);
